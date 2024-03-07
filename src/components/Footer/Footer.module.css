@@ -1,6 +1,4 @@
-.footer{
-    width:90%;
-    margin-left:5%;
+#footer{
     display: flex;
     justify-content: center;
 }

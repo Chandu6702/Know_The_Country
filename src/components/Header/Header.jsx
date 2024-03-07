@@ -4,7 +4,7 @@ import Styles from './Header.module.css'
 function Header() {
   return (
     <div id={Styles['header']}>
-        <h1>Know_The_Country</h1>
+        <h1 id={Styles['logo']}>Know_The_Country</h1>
     </div>
   )
 }
