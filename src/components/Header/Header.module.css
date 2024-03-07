@@ -1,0 +1,14 @@
+#header{
+    width:90%;
+    margin-left: 5%;
+    margin-top : 5%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size:15px;
+}
