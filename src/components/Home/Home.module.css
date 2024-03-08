@@ -8,7 +8,7 @@
 #search-bar{
     font-size: 25px;
     width: 500px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     box-shadow: rgb(33, 33, 33);
 }
@@ -18,11 +18,16 @@
     color: white;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: rgb(35, 35, 250);
-    box-shadow: rgb(116, 120, 207);
+    background-color:  rgb(122, 127, 227);
 }
 
-
+#search:hover{
+    color: blue;
+    cursor:pointer;
+}
+#search:active{
+    background-color:aliceblue;
+}
 
 #cards{
     display: flex;

@@ -1,19 +1,36 @@
-import React from 'react'
+import {React,useState} from 'react'
+
 import Styles from './Home.module.css'
 import Card from './Card/Card'
 function Home() {
+  const [search,setSearch] = useState(
+    {
+      key:''
+    }
+  )
+
+  function handleSubmit(e)
+  {
+    e.preventDefault()
+  }
+
+  function handleChange(e)
+  {
+    setSearch({key:e.target.value})
+  }
+
   return (
     <div id={Styles['home']}>
       <form>
-      <input type='text' name='search-bar' id={Styles['search-bar']}></input>
-      <button type='submit' id={Styles['search']}>Search</button>
+      <input type='text' name='search-bar' id={Styles['search-bar']} onChange={handleChange} value={search.key}></input>
+      <button type='submit' id={Styles['search']} onClick={handleSubmit}>Search</button>
       </form>
 
       <div id={Styles['cards']}>
-      <Card text="Basic-Info" para="matter"/>
-      <Card text="History" para="matter"/>
-      <Card text="Geography" para="matter"/>
-      <Card text="Culture" para="matter"/>
+      <Card text="Basic-Info"/>
+      <Card text="History" />
+      <Card text="Geography" />
+      <Card text="Culture" />
       </div>
 
     </div>
