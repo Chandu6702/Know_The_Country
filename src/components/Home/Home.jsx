@@ -15,9 +15,10 @@ function Home() {
   async function handleSubmit(e)
   {
     e.preventDefault()
-    console.log(e);
-    const res=await axios.get(`http://127.0.0.1:3000/${search.key}`);
-    setData(res.data)
+    // console.log(e);
+    const res=await axios.get(`https://know-the-country-backend.onrender.com/${search.key}`);
+    console.log(res)
+    setData(res.data.res)
   }
 
   function handleChange(e)

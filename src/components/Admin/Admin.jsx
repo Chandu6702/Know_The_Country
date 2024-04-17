@@ -12,14 +12,20 @@ function Admin() {
     culture:""
   })
 
+  const[success,setSuccess]=useState(false)
+
+
   function handleChange(e){
     setData({...data,[e.target.name]:e.target.value.toUpperCase()})
-    console.log(data);
+    // console.log(data);
   }
 
   async function handleSubmit(e){
     e.preventDefault()
-    await axios.post('http://127.0.0.1:3000/add',data);
+    const res=await axios.post('https://know-the-country-backend.onrender.com/add',data);
+    console.log(res)
+    setSuccess(res.data.status)
+    // setData({})
   }
 
   return (
@@ -32,6 +38,9 @@ function Admin() {
         <textarea name='culture' value={data.culture} placeholder='culture' onChange={handleChange}/>
         <button onClick={handleSubmit}>Submit</button>
       </form>
+      {
+        success?<h1>Success</h1>:""
+      }
     </div>
   )
 }
