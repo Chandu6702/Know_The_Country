@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import Styles from './Home.module.css'
 import Card from './Card/Card'
+import { NavLink } from 'react-router-dom'
 function Home() {
   const [search,setSearch] = useState(
     {
@@ -39,6 +40,9 @@ function Home() {
       <Card text="Geography" content={data.geography}/>
       <Card text="Culture" content={data.culture}/>
       </div>
+      <NavLink to='admin'>
+        Admin
+      </NavLink>
 
     </div>
   )
