@@ -40,10 +40,6 @@ function Home() {
       <Card text="Geography" content={data.geography}/>
       <Card text="Culture" content={data.culture}/>
       </div>
-      <NavLink to='admin'>
-        Admin
-      </NavLink>
-
     </div>
   )
 }
